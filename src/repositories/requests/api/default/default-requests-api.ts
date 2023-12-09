@@ -4,7 +4,7 @@ import { IRequestsApi } from "@repositories/requests/dependencies/requests-api.i
 import { Request } from "@domain/request";
 
 export class DefaultRequestsApi implements IRequestsApi {
-    private readonly URL = "https://iskra.foundation/core/upload_request";
+    private readonly URL = "https://api.iskra.foundation/core/upload_request";
     private readonly ERROR_LIMIT = 3;
 
     private errorCounter = 0;

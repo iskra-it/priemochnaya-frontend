@@ -4,8 +4,8 @@ import { mapAttributes, mapResponse } from "./api-mappers";
 import { AttributeResponse } from "./api-models";
 
 export class DefaultMessagsApi implements IMessagesApi {
-    private readonly URL = "https://iskra.foundation/core/question";
-    private readonly RECOMMENDATIONS_URL = "https://iskra.foundation/core/fuzzy_recommendation";
+    private readonly URL = "https://api.iskra.foundation/core/question";
+    private readonly RECOMMENDATIONS_URL = "https://api.iskra.foundation/core/fuzzy_recommendation";
     private readonly ERROR_LIMIT = 3;
 
     private errorCounter = 0;
