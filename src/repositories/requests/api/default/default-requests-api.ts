@@ -2,9 +2,10 @@ import { CompletedAttribute } from "@domain/attribute";
 import { mapRequest } from "./api-mappers";
 import { IRequestsApi } from "@repositories/requests/dependencies/requests-api.interface";
 import { Request } from "@domain/request";
+import baseUrl from "../../../../utils/constants";
 
 export class DefaultRequestsApi implements IRequestsApi {
-    private readonly URL = "https://api.iskra.foundation/core/upload_request";
+    private readonly URL = baseUrl + "/core/upload_request";
     private readonly ERROR_LIMIT = 3;
 
     private errorCounter = 0;

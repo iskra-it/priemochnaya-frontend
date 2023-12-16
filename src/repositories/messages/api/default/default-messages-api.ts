@@ -2,10 +2,11 @@ import { CompletedAttribute, isAttribute } from "@domain/attribute";
 import { IMessagesApi, ResolveResponse } from "../../dependencies/messages-api.interface";
 import { mapAttributes, mapResponse } from "./api-mappers";
 import { AttributeResponse } from "./api-models";
+import baseUrl from "../../../../utils/constants";
 
 export class DefaultMessagsApi implements IMessagesApi {
-    private readonly URL = "https://api.iskra.foundation/core/question";
-    private readonly RECOMMENDATIONS_URL = "https://api.iskra.foundation/core/fuzzy_recommendation";
+    private readonly URL = baseUrl + "/core/question";
+    private readonly RECOMMENDATIONS_URL = baseUrl + "/core/fuzzy_recommendation";
     private readonly ERROR_LIMIT = 3;
 
     private errorCounter = 0;
